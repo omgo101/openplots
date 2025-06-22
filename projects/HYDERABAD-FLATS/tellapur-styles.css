@@ -1,0 +1,222 @@
+/* Color Variables */
+:root {
+  --primary: #2c3e50;
+  --primary-light: #34495e;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.tellapur-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center center/cover;
+  color: white;
+  height: 60vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+/* Project Cards */
+.project-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-details {
+  padding: 25px;
+}
+
+.project-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.project-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 15px 0;
+  font-size: 0.95rem;
+  color: var(--gray);
+}
+
+.project-features span {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.project-features i {
+  margin-right: 7px;
+  color: var(--secondary);
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-top: 10px;
+}
+
+/* Location Cards */
+.location-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+}
+
+.location-card h4 {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+/* Investment Highlights */
+.investment-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.highlight-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.highlight-item i {
+  font-size: 1.8rem;
+  color: var(--secondary);
+}
+
+.highlight-item h5 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+/* Reasons List */
+.reasons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.reason-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* CTA Section */
+.cta-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tellapur-hero {
+    text-align: center;
+    height: auto;
+    padding: 100px 0;
+  }
+  
+  .tellapur-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .project-features span {
+    width: 100%;
+  }
+  
+  .project-details h3 {
+    font-size: 1.5rem;
+  }
+  
+  .investment-highlights {
+    gap: 15px;
+  }
+  
+  .highlight-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}

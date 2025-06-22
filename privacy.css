@@ -1,0 +1,95 @@
+/* Privacy Policy Page Styles */
+/* Color Variables */
+:root {
+  --primary: #1a5276;
+  --primary-light: #2980b9;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* Privacy Header */
+.privacy-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') no-repeat center center/cover;
+  color: white;
+  padding: 100px 0;
+}
+
+.privacy-header h1 {
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Privacy Content */
+.privacy-content {
+  background-color: var(--light);
+}
+
+.privacy-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-intro {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.privacy-section {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.privacy-section:last-child {
+  border-bottom: none;
+}
+
+.privacy-section h3 {
+  color: var(--primary);
+  font-weight: 600;
+  position: relative;
+  padding-left: 20px;
+}
+
+.privacy-section h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+}
+
+.privacy-section p,
+.privacy-section li {
+  color: var(--dark);
+  line-height: 1.8;
+}
+
+.privacy-section ul {
+  padding-left: 20px;
+}
+
+.privacy-section li {
+  margin-bottom: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .privacy-header {
+    padding: 60px 0;
+  }
+  
+  .privacy-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .privacy-card {
+    padding: 30px;
+  }
+}

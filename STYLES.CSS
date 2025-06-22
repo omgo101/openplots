@@ -1,0 +1,245 @@
+/* Color Variables */
+:root {
+  --primary: #1a5276;
+  --primary-light: #2980b9;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.fs-4.fw-bold {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6') no-repeat center center/cover;
+  color: white;
+  height: 80vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+/* Property Cards */
+.property-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-10px);
+}
+
+.property-details {
+  padding: 20px;
+}
+
+.property-details h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* Location Cards */
+.location-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.location-card:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-5px);
+}
+
+.location-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+
+.location-card:hover .location-icon {
+  color: white;
+}
+
+/* Amenity Cards */
+.amenity-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.amenity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.amenity-icon {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+/* Blog Cards */
+.blog-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+/* Contact Section */
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.contact-info-icon {
+  color: var(--secondary);
+}
+
+.contact-form {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    text-align: center;
+    height: auto;
+    padding: 80px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+}
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-ico {
+  width: 36px;
+  height: 36px;
+  fill: white;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 56px;
+    height: 56px;
+    bottom: 20px;
+    right: 15px;
+  }
+  
+  .whatsapp-ico {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}

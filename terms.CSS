@@ -1,0 +1,83 @@
+/* Terms and Conditions Page Styles */
+
+/* Color Variables */
+:root {
+  --primary: #1a5276;
+  --primary-light: #2980b9;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* Terms Header */
+.terms-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center center/cover;
+  color: white;
+  padding: 100px 0;
+}
+
+.terms-header h1 {
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Terms Content */
+.terms-content {
+  background-color: var(--light);
+}
+
+.terms-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.terms-section {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.terms-section:last-child {
+  border-bottom: none;
+}
+
+.terms-section h3 {
+  color: var(--primary);
+  font-weight: 600;
+  position: relative;
+  padding-left: 20px;
+}
+
+.terms-section h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+}
+
+.terms-section p {
+  color: var(--dark);
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .terms-header {
+    padding: 60px 0;
+  }
+  
+  .terms-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .terms-card {
+    padding: 30px;
+  }
+}

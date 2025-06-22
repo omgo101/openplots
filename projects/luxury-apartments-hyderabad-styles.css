@@ -1,0 +1,186 @@
+/* Color Variables */
+:root {
+  --primary: #2c3e50;
+  --primary-light: #34495e;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.apartments-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914') no-repeat center center/cover;
+  color: white;
+  height: 60vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+/* Project Cards */
+.project-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project-details h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.project-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.project-features span {
+  display: flex;
+  align-items: center;
+}
+
+.project-features i {
+  margin-right: 5px;
+  color: var(--secondary);
+}
+
+/* Amenity Cards */
+.amenity-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.amenity-card:hover {
+  transform: translateY(-5px);
+}
+
+.amenity-icon {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+/* Advantage Cards */
+.advantage-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+}
+
+.advantage-card h4 {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.advantage-card i {
+  color: var(--secondary);
+  margin-right: 10px;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--primary);
+}
+
+.cta-section h2 {
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-light {
+  background-color: white;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .apartments-hero {
+    text-align: center;
+    height: auto;
+    padding: 100px 0;
+  }
+  
+  .apartments-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .cta-section .col-lg-8 {
+    margin-bottom: 20px;
+  }
+  
+  .cta-section .col-lg-4 {
+    text-align: center !important;
+  }
+}

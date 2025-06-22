@@ -1,0 +1,303 @@
+/* Color Variables */
+:root {
+    --primary: #1a5276;
+    --primary-light: #2980b9;
+    --secondary: #e67e22;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --gray: #6c757d;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Hero Section */
+.project-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c') no-repeat center center/cover;
+    color: white;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--secondary);
+}
+
+/* Project Overview */
+.project-overview {
+    background-color: white;
+}
+
+/* Gallery Section */
+.gallery-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Gallery Modal */
+.modal-content {
+    border: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 60%;
+}
+
+/* Amenities Section */
+.amenity-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.amenity-card:hover {
+    transform: translateY(-5px);
+}
+
+.amenity-card i {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.amenity-card h4 {
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+/* Payment Options */
+.payment-card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+}
+
+.payment-card h3 {
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.payment-card h4 {
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+.payment-card ul {
+    padding-left: 20px;
+    text-align: left;
+}
+
+.payment-card li {
+    margin-bottom: 8px;
+}
+
+.note-box {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.note-box h5 {
+    color: var(--secondary);
+}
+
+/* Location Highlights */
+.location-highlights {
+    background-color: var(--primary);
+}
+
+.location-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.location-card i {
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+}
+
+.location-card h4 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.location-card p {
+    color: rgba(27, 25, 25, 0.8);
+    margin-bottom: 0;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Project Overview Styles */
+.project-overview .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-overview .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.feature-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--primary-light);
+}
+
+.feature-icon i {
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon i {
+    transform: scale(1.1);
+    color: var(--secondary) !important;
+}
+
+.advantage-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.advantage-section::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23e67e22" opacity="0.1"><path d="M50 0 L100 50 L50 100 L0 50 Z"/></svg>');
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.advantage-section::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23e67e22" opacity="0.1"><circle cx="50" cy="50" r="50"/></svg>');
+    background-size: contain;
+    opacity: 0.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .project-hero {
+        text-align: center;
+        height: auto;
+        padding: 80px 0;
+    }
+    
+    .project-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .gallery-img {
+        height: 150px;
+    }
+    
+    .amenity-card, .payment-card, .highlight-card, .location-card {
+        padding: 15px;
+    }
+    
+    .location-card i {
+        font-size: 1.5rem;
+    }
+    
+    .project-overview .card-body {
+        padding: 2rem !important;
+    }
+    
+    .feature-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .feature-card:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,172 @@
+/* Color Variables */
+:root {
+  --primary: #1a5276;
+  --primary-light: #2980b9;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.locations-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') no-repeat center center/cover;
+  color: white;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+/* Location Cards */
+.location-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+}
+
+.location-details {
+  padding: 20px;
+}
+
+.location-details h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.location-features {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: var(--gray);
+  flex-wrap: wrap;
+}
+
+.location-features span {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.location-features i {
+  margin-right: 5px;
+}
+
+/* Contact Section */
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.contact-info-icon {
+  color: var(--secondary);
+}
+
+.contact-form {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .locations-hero {
+    text-align: center;
+    height: auto;
+    padding: 80px 0;
+  }
+  
+  .locations-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  
+}
+
+/* Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}

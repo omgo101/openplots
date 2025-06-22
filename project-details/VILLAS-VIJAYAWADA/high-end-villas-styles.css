@@ -1,0 +1,300 @@
+/* Color Variables */
+:root {
+  --primary: #1a5276;
+  --primary-light: #2980b9;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.project-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6') no-repeat center center/cover;
+  color: white;
+  height: 60vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+/* Project Overview */
+.project-overview {
+  background-color: white;
+}
+
+/* Gallery Section */
+.gallery-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Gallery Modal */
+.modal-content {
+  border: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 60%;
+}
+
+/* Location Map Section */
+.location-map-section img {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Location Map Modal */
+#locationMapModal .modal-body img {
+  max-height: 80vh;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Amenities Section */
+.amenities-section {
+  background-color: #f9f9f9;
+}
+
+.amenity-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.amenity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.amenity-card i {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.amenity-card h4 {
+  font-size: 1.2rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* Payment Options */
+.payment-card {
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+}
+
+.payment-card h3 {
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.payment-card h4 {
+  color: var(--secondary);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.specs-box {
+  border-left: 3px solid var(--secondary);
+}
+
+.location-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.location-highlight i {
+  color: var(--secondary);
+}
+
+.payment-card ul {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.payment-card li {
+  margin-bottom: 10px;
+}
+
+.note-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.note-box h5 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.note-box ul {
+  padding-left: 20px;
+}
+
+.note-box li {
+  margin-bottom: 10px;
+}
+
+/* Location Highlights */
+.location-highlights {
+  background-color: var(--primary);
+}
+
+.location-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.location-card i {
+  font-size: 2.5rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+}
+
+.location-card h4 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.location-card p {
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  padding: 10px 25px;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+  padding: 10px 25px;
+  font-weight: 500;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .project-hero {
+    text-align: center;
+    height: auto;
+    padding: 80px 0;
+  }
+  
+  .project-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .gallery-img {
+    height: 150px;
+  }
+  
+  .amenity-card, .payment-card, .location-card {
+    padding: 20px 15px;
+  }
+  
+  .location-card i, .amenity-card i {
+    font-size: 2rem;
+  }
+  
+  .payment-card {
+    padding: 25px 20px;
+  }
+  
+  .payment-card h3 {
+    font-size: 1.8rem;
+  }
+  
+  .payment-card h4 {
+    font-size: 1.2rem;
+  }
+}

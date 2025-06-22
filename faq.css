@@ -1,0 +1,91 @@
+/* FAQ Page Styles */
+/* Color Variables */
+:root {
+  --primary: #1a5276;
+  --primary-light: #2980b9;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* FAQ Header */
+.faq-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') no-repeat center center/cover;
+  color: white;
+  padding: 100px 0;
+}
+
+.faq-header h1 {
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* FAQ Content */
+.faq-content {
+  background-color: var(--light);
+}
+
+.faq-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Accordion Styles */
+.accordion-button {
+  font-weight: 600;
+  color: var(--primary);
+  background-color: rgba(26, 82, 118, 0.05);
+  padding: 1.25rem 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary);
+  background-color: rgba(26, 82, 118, 0.1);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button::after {
+  background-size: 1rem;
+}
+
+.accordion-body {
+  padding: 1.5rem;
+  line-height: 1.8;
+  color: var(--dark);
+}
+
+.accordion-body strong {
+  color: var(--primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .faq-header {
+    padding: 60px 0;
+  }
+  
+  .faq-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .faq-card {
+    padding: 30px;
+  }
+  
+  .accordion-button {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .accordion-body {
+    padding: 1rem;
+  }
+}

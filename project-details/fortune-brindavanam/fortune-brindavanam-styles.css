@@ -1,0 +1,275 @@
+/* Color Variables */
+:root {
+  --primary: #2c3e50;
+  --primary-light: #34495e;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.project-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1560518883-ce09059eeffa') no-repeat center center/cover;
+  color: white;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+/* Project Overview */
+.project-overview {
+  background-color: white;
+}
+
+/* Video Section */
+.video-section {
+  background-color: var(--light);
+}
+
+/* Gallery Section */
+.gallery-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+}
+
+/* Gallery Modal */
+.modal-content {
+  border: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-size: 60%;
+}
+
+/* Amenities Section */
+.amenity-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.amenity-card:hover {
+  transform: translateY(-5px);
+}
+
+.amenity-card i {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+.amenity-card h4 {
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+/* Payment Options */
+.payment-card {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+}
+
+.payment-card h3 {
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.payment-card h4 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.note-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.note-box h5 {
+  color: var(--secondary);
+}
+
+/* Location Highlights */
+.highlight-item {
+  margin-bottom: 40px;
+}
+
+.highlight-item h3 {
+  color: var(--primary);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.highlight-item h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+.highlight-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlight-list li {
+  padding: 8px 0;
+  position: relative;
+  padding-left: 30px;
+}
+
+.highlight-list li i {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: var(--secondary);
+}
+
+/* Location Cards */
+.location-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 25px;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.location-card i {
+  font-size: 2rem;
+  color: rgb(24, 21, 21);
+  margin-bottom: 15px;
+}
+
+.location-card h4 {
+  color: rgb(60, 79, 219);
+  margin-bottom: 15px;
+}
+
+.location-card ul {
+  list-style: none;
+  padding-left: 0;
+    color: rgb(60, 79, 219);
+}
+
+.location-card ul li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.location-card ul li:before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--secondary);
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--light);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .project-hero {
+    text-align: center;
+    height: auto;
+    padding: 80px 0;
+  }
+  
+  .project-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .gallery-img {
+    height: 150px;
+  }
+  
+  .amenity-card, .payment-card, .location-card {
+    padding: 15px;
+  }
+}

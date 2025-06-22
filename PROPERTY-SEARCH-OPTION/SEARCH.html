@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Open Plots</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- About CSS -->
+         <link rel="stylesheet" href="SEARCH-STYLES.css">
+    <style>
+        /* Tree view styles */
+        .tree-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #propertyTree, #propertyTree ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .tree-node {
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+            padding: 5px;
+            display: inline-block;
+        }
+
+        .tree-node:hover {
+            background-color: #f0f0f0;
+        }
+
+        .tree-node.expanded::before {
+            content: "▼ ";
+        }
+
+        .tree-node.collapsed::before {
+            content: "► ";
+        }
+
+        .tree-leaf {
+            cursor: pointer;
+            color: #666;
+            text-decoration: none;
+            display: block;
+            padding: 5px 5px 5px 25px;
+        }
+
+        .tree-leaf:hover {
+            background-color: #f0f0f0;
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        /* Search section styles */
+        .search-section {
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #searchInput {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            flex-grow: 1;
+            max-width: 500px;
+        }
+
+        #searchButton, #clearSearch {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #clearSearch {
+            background-color: #6c757d;
+        }
+
+        #searchButton:hover {
+            background-color: #0056b3;
+        }
+
+        #clearSearch:hover {
+            background-color: #5a6268;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-include="/header.html"></div>
+
+    <main>
+        <section class="search-section">
+            <input type="text" id="searchInput" placeholder="Search by property, flat, villa or location...">
+            <button id="searchButton">Search</button>
+            <button id="clearSearch">Reset</button>
+        </section>
+
+        <section class="tree-section">
+            <h2>Property Tree View</h2>
+            <div class="tree-container">
+                <ul id="propertyTree">
+                    <li>
+                        <span class="tree-node">Hyderabad</span>
+                        <ul>
+                            <li>
+                                <span class="tree-node">Plots-Hyderabad</span>
+                                <ul>
+                                    <span class="tree-node">Shadnagar-Hyderabad</span>
+                                    <ul>
+                                        <li><a href="/project-details/shadnagar.html/true-gold-hitek.html"
+                                                class="tree-leaf">TRUE GOLD & HITEK PARK Plots-Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/brundavanam.html"
+                                                class="tree-leaf">BRUNDAVANAM Plots Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/RAMKY-BLISS.html"
+                                                class="tree-leaf">RAMKY BLISS Plots-Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/true-highlands.html"
+                                                class="tree-leaf">TRUE HIGHLANDS PHASE-1 Plots Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/terrain.html"
+                                                class="tree-leaf">TERRAIN Plots-Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/highway-orchards.html"
+                                                class="tree-leaf">THE HIGHWAY ORCHARDS Plots Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/true-platinum.htmL"
+                                                class="tree-leaf">TRUE PLATINUM BURGULA Plots-Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/southern-vista.html"
+                                                class="tree-leaf">SOUTHERN VISTA Plots Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/true-landmark.html"
+                                                class="tree-leaf">TRUE LANDMARK 2 EXECUTIVE PHASE 1 & 2
+                                                Plots-Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/true-sapphire.html"
+                                                class="tree-leaf">TRUE SAPPHIRE BURGULA Plots Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/true-emerald-burgula.html"
+                                                class="tree-leaf">TRUE EMERALD BURGULA Plots-Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/true-double-diamond.html"
+                                                class="tree-leaf">TRUE DOUBLE DIAMOND BURGULA BLOCK-A B & C Plots
+                                                Shadnagar-Hyderabad</a>
+                                        </li>
+                                        <li><a href="/project-details/shadnagar.html/true-grande.html"
+                                                class="tree-leaf">TRUE GRANDE Plots Shadnagar-Hyderabad</a>
+                                        </li>
+                                    </ul>
+                                    <li>
+                                        <span class="tree-node">Shabad-Hyderabad</span>
+                                        <ul>
+                                            <li><a href="#" class="tree-leaf">VIAN VALLEY Phase 3 & 4 Plots
+                                                    Shabad-Hyderabad</a>
+                                            </li>
+                                            <li><a href="#" class="tree-leaf">VIAN VALLEY Phase 1 and Phase 2 and VIAN
+                                                    BBG'S JUBILEE CENTRAL Plots Shabad-Hyderabad</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="tree-node">Sadashivpet-Hyderabad</span>
+                                        <ul>
+                                            <li><a href="#" class="tree-leaf">TRUE FORTUNE PRIDE Plots
+                                                    Sadashivpet-Hyderabad</a>
+                                            </li>
+                                            <li><a href="#" class="tree-leaf">TRUE IKONIA PHASE-1 & COMMERCIAL Plots
+                                                    Sadashivpet-Hyderabad</a>
+                                            </li>
+                                            <li><a href="#" class="tree-leaf">TRUE FORTUNE EXECUTIVE Plots
+                                                    Sadashivpet-Hyderabad</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><span class="tree-node">Yadagirigutta-Hyderabad</span>
+                                         <ul>
+                                            <li><a href="#" class="tree-leaf">AKSHITHA Yadagirigutta-Hyderabad</a>
+                                            </li>
+                                            <li><a href="#" class="tree-leaf">TRUE PRESTIGE COMMERCIAL Yadagirigutta-Hyderabad</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="tree-node" href="/projects/hydrabad/suryapet.html">SURYAPET Plots-Hyderabad</a></li>
+                                    <li><span class="tree-node">Aleru-Hyderabad</span>
+                                        <ul>
+                                            <li><a href="#" class="tree-leaf">ROYAL HIWAY MEADOWS Plots-Hyderabad</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> <span class="tree-node">Chegunta</span></li>
+                                    <li><span class="tree-node">Shameerpet</span></li>
+                                    <li><span class="tree-node">Maheshwaram</span></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="tree-node">Flats</span>
+                                <ul>
+                                    <li><a href="flat-b1.html" class="tree-leaf">Flat B1 - 2BHK - ₹45,00,000</a></li>
+                                    <li><a href="flat-b2.html" class="tree-leaf">Flat B2 - 3BHK - ₹60,00,000</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="tree-node">Vijayawada</span>
+                        <ul>
+                            <li>
+                                <span class="tree-node">Villas</span>
+                                <ul>
+                                    <li><a href="villa-c1.html" class="tree-leaf">Villa C1 - 4BHK - ₹1,20,00,000</a>
+                                    </li>
+                                    <li><a href="villa-c2.html" class="tree-leaf">Villa C2 - 5BHK - ₹1,50,00,000</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="tree-node">Apartments</span>
+                                <ul>
+                                    <li><a href="apartment-d1.html" class="tree-leaf">Apartment D1 - 2BHK -
+                                            ₹50,00,000</a></li>
+                                    <li><a href="apartment-d2.html" class="tree-leaf">Apartment D2 - 3BHK -
+                                            ₹75,00,000</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <div data-include="/footer.html"></div>
+    <script src="/include.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById("searchInput");
+            const searchButton = document.getElementById("searchButton");
+            const clearSearch = document.getElementById("clearSearch");
+            const tree = document.getElementById("propertyTree");
+
+            // Initialize tree - collapse all nodes by default
+            function initTree() {
+                document.querySelectorAll('.tree-node').forEach(node => {
+                    const childUl = node.parentElement.querySelector('ul');
+                    if (childUl) {
+                        childUl.style.display = 'none';
+                        node.classList.add('collapsed');
+                        
+                        // Add click event to toggle nodes
+                        node.addEventListener('click', function (e) {
+                            e.stopPropagation();
+                            toggleNode(this);
+                        });
+                    }
+                });
+            }
+
+            function toggleNode(node) {
+                const childUl = node.parentElement.querySelector('ul');
+                if (childUl) {
+                    const isVisible = childUl.style.display !== 'none';
+                    childUl.style.display = isVisible ? 'none' : 'block';
+                    node.classList.toggle('collapsed', isVisible);
+                    node.classList.toggle('expanded', !isVisible);
+                }
+            }
+
+            // Expand all parent nodes up to root
+            function expandParents(el) {
+                let parent = el.parentElement;
+                while (parent && parent.id !== 'propertyTree') {
+                    if (parent.tagName === 'UL') {
+                        parent.style.display = 'block';
+                        const prev = parent.previousElementSibling;
+                        if (prev && prev.classList.contains('tree-node')) {
+                            prev.classList.remove('collapsed');
+                            prev.classList.add('expanded');
+                        }
+                    }
+                    parent = parent.parentElement;
+                }
+            }
+
+            function highlightText(el, searchText) {
+                const text = el.textContent;
+                const escaped = searchText.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                const regex = new RegExp(`(${escaped})`, 'gi');
+                el.innerHTML = text.replace(regex, '<span class="highlight">$1</span>');
+            }
+
+            // Remove highlights
+            function removeHighlights() {
+                document.querySelectorAll('.highlight').forEach(span => {
+                    const parent = span.parentNode;
+                    parent.textContent = parent.textContent;
+                });
+            }
+
+            // Perform search
+            function performSearch() {
+                const query = searchInput.value.trim().toLowerCase();
+                if (query === '') {
+                    clearSearchResults();
+                    return;
+                }
+
+                removeHighlights();
+
+                const allItems = tree.querySelectorAll('.tree-node, .tree-leaf');
+                let hasMatches = false;
+
+                // First hide all items
+                allItems.forEach(item => {
+                    item.style.display = 'none';
+                });
+
+                // Show matching items and their parents
+                allItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        item.style.display = '';
+                        highlightText(item, query);
+                        expandParents(item);
+                        hasMatches = true;
+                    }
+                });
+
+                if (!hasMatches) {
+                    alert('No matching properties found.');
+                }
+            }
+
+            // Clear search and reset tree
+            function clearSearchResults() {
+                searchInput.value = '';
+                removeHighlights();
+
+                // Show all items
+                document.querySelectorAll('.tree-node, .tree-leaf').forEach(item => {
+                    item.style.display = '';
+                });
+
+                // Collapse all nodes except root
+                document.querySelectorAll('.tree-node').forEach(node => {
+                    const ul = node.parentElement.querySelector('ul');
+                    if (ul) {
+                        ul.style.display = 'none';
+                        node.classList.add('collapsed');
+                        node.classList.remove('expanded');
+                    }
+                });
+            }
+
+            // Search button click
+            searchButton.addEventListener('click', performSearch);
+
+            // Search on Enter key
+            searchInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+
+            // Clear button
+            clearSearch.addEventListener('click', clearSearchResults);
+
+            // Initialize tree on load
+            initTree();
+        });
+    </script>
+</body>
+</html>

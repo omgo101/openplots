@@ -1,0 +1,210 @@
+/* Color Variables */
+:root {
+  --primary: #1a5276;
+  --primary-light: #2980b9;
+  --secondary: #e67e22;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #6c757d;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.kanchikacherla-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1566073771259-6a8506099945') no-repeat center center/cover;
+  color: white;
+  height: 60vh;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+/* Section Titles */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--primary);
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--secondary);
+}
+
+/* Project Cards */
+.project-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project-details h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.project-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+.project-features span {
+  display: flex;
+  align-items: center;
+}
+
+.project-features i {
+  margin-right: 5px;
+  color: var(--secondary);
+}
+
+/* Feature Cards */
+.feature-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--secondary);
+}
+
+/* Amenity Cards */
+.amenity-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.amenity-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--primary);
+  color: white;
+}
+
+.amenity-card:hover i {
+  color: white;
+}
+
+.amenity-card i {
+  font-size: 2rem;
+  color: var(--secondary);
+  margin-bottom: 15px;
+}
+
+/* Investment Section */
+.investment-features {
+  list-style: none;
+  padding: 0;
+}
+
+.investment-features li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.investment-features i {
+  color: var(--secondary);
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+/* Contact Section */
+.contact-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .kanchikacherla-hero {
+    text-align: center;
+    height: auto;
+    padding: 100px 0;
+  }
+  
+  .kanchikacherla-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .project-features span {
+    width: 100%;
+  }
+  
+  .investment-section .col-lg-6:last-child {
+    margin-top: 30px;
+  }
+}

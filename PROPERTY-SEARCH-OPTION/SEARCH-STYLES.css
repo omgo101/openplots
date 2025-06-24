@@ -139,7 +139,7 @@ main {
 
 .tree-node.expanded::before {
     content: '-';
-}
+} 
 
 .tree-leaf {
     color: #7f8c8d;

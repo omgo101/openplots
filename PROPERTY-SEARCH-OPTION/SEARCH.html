@@ -9,105 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <!-- About CSS -->
-    <link rel="stylesheet" href="SEARCH-STYLES.css">
-    <style>
-        /* Tree view styles */
-        .tree-container {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        #propertyTree,
-        #propertyTree ul {
-            list-style-type: none;
-            padding-left: 20px;
-        }
-
-        .tree-node {
-            cursor: pointer;
-            font-weight: bold;
-            color: #333;
-            padding: 5px;
-            display: inline-block;
-        }
-
-        .tree-node:hover {
-            background-color: #f0f0f0;
-        }
-
-        .tree-node.expanded::before {
-            content: "▼ ";
-        }
-
-        .tree-node.collapsed::before {
-            content: "► ";
-        }
-
-        .tree-leaf {
-            cursor: pointer;
-            color: #666;
-            text-decoration: none;
-            display: block;
-            padding: 5px 5px 5px 25px;
-        }
-
-        .tree-leaf:hover {
-            background-color: #f0f0f0;
-            text-decoration: underline;
-        }
-
-        .highlight {
-            background-color: yellow;
-            font-weight: bold;
-        }
-
-        /* Search section styles */
-        .search-section {
-            padding: 20px;
-            background-color: #f5f5f5;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        #searchInput {
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            flex-grow: 1;
-            max-width: 500px;
-        }
-
-        #searchButton,
-        #clearSearch {
-            padding: 10px 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        #clearSearch {
-            background-color: #6c757d;
-        }
-
-        #searchButton:hover {
-            background-color: #0056b3;
-        }
-
-        #clearSearch:hover {
-            background-color: #5a6268;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-    </style>
+    <link rel="stylesheet" href="search-styles.css">
 </head>
 
 <body>
@@ -344,8 +246,69 @@
                                     <li><a href="/project-details/VISAKHAPATNAM/BHOGAPURAM/aero-hub.html"
                                             class="tree-leaf">AERO HUB PHASE -1 plots Bhogapuram-Visakhapatnam</a></li>
                                     <li><a href="/project-details/VISAKHAPATNAM/BHOGAPURAM/kohinoor-gateway.html"
-                                            class="tree-leaf">KOHINOOR GATEWAY, GATEWAY EXECUTIVE & GATEWAY COMMERCIAL plots Bhogapuram-Visakhapatnam</a></li>
+                                            class="tree-leaf">KOHINOOR GATEWAY, GATEWAY EXECUTIVE & GATEWAY COMMERCIAL
+                                            plots Bhogapuram-Visakhapatnam</a></li>
                                 </ul>
+                            </li>
+                            <li>
+                                <span class="tree-node">Anandapuram-Visakhapatnam</span>
+                                <ul>
+                                    <li><a href="/project-details/VISAKHAPATNAM/ANANDAPURAM/true-capital.html"
+                                            class="tree-leaf">TRUE CAPITAL plots Anandapuram-Visakhapatnam</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="tree-node">Achutapuram-Visakhapatnam</span>
+                                <ul>
+                                    <li><a href="/project-details/VISAKHAPATNAM/ACHUTAPURAM/kohinoor-prime.html"
+                                            class="tree-leaf">KOHINOOR PRIME plots Anandapuram-Visakhapatnam</a></li>
+                                    <li><a href="/project-details/VISAKHAPATNAM/ACHUTAPURAM/true-prime-commercial.HTML"
+                                            class="tree-leaf">TRUE PRIME COMMERCIAL plots Anandapuram-Visakhapatnam</a>
+                                    </li>
+                                    <li><a href="/project-details/VISAKHAPATNAM/ACHUTAPURAM/kohinoor-prime1.HTML"
+                                            class="tree-leaf">KOHINOOR PRIME 1 plots Anandapuram-Visakhapatnam</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="tree-node">Kothavalasa-Visakhapatnam</span>
+                                <ul>
+                                    <li><a href="/projects/visakhapatnam/kothavalasa.html" class="tree-leaf">Kothavalasa
+                                            plots Kothavalasa-Visakhapatnam</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="tree-node">Srikakulam</span>
+                        <ul>
+                            <li>
+                                <span class="tree-node">Srikakulam</span>
+                                <ul>
+                                    <li><a href="/projects/srikakulam.html" class="tree-leaf"> plots in Srikakulam</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="tree-node">Rajahmundry</span>
+                        <ul>
+                            <li>
+                                <span class="tree-node">Diwancheruvu-Rajahmundry</span>
+                                <ul>
+                                    <li><a href="/project-details/Rajahmundry/Diwancheruvu.html" class="tree-leaf">
+                                            plots in
+                                            Diwancheruvu-Rajahmundry</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="tree-node">Nellore</span>
+                        <ul>
+                            <li><a href="/project-details/nellore/kohinoor-central.html" class="tree-leaf">
+                                    KOHINOOR CENTRAL Plots Nellore</a>
                             </li>
                         </ul>
                     </li>
@@ -410,11 +373,16 @@
                 }
             }
 
-            function highlightText(el, searchText) {
-                const text = el.textContent;
-                const escaped = searchText.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
-                const regex = new RegExp(`(${escaped})`, 'gi');
-                el.innerHTML = text.replace(regex, '<span class="highlight">$1</span>');
+            // Highlight multiple search terms
+            function highlightText(el, searchTerms) {
+                let text = el.textContent;
+                searchTerms.forEach(term => {
+                    if (term.trim() === '') return;
+                    const escaped = term.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                    const regex = new RegExp(`(${escaped})`, 'gi');
+                    text = text.replace(regex, '<span class="highlight">$1</span>');
+                });
+                el.innerHTML = text;
             }
 
             // Remove highlights
@@ -435,6 +403,9 @@
 
                 removeHighlights();
 
+                // Split search query into individual words
+                const searchTerms = query.split(/\s+/);
+
                 const allItems = tree.querySelectorAll('.tree-node, .tree-leaf');
                 let hasMatches = false;
 
@@ -446,9 +417,14 @@
                 // Show matching items and their parents
                 allItems.forEach(item => {
                     const text = item.textContent.toLowerCase();
-                    if (text.includes(query)) {
+                    // Check if all search terms are present
+                    const allTermsMatch = searchTerms.every(term =>
+                        term.trim() !== '' && text.includes(term)
+                    );
+
+                    if (allTermsMatch) {
                         item.style.display = '';
-                        highlightText(item, query);
+                        highlightText(item, searchTerms);
                         expandParents(item);
                         hasMatches = true;
                     }

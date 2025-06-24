@@ -10,7 +10,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!-- About CSS -->
-         <link rel="stylesheet" href="SEARCH-STYLES.css">
+    <link rel="stylesheet" href="SEARCH-STYLES.css">
     <style>
         /* Tree view styles */
         .tree-container {
@@ -21,7 +21,8 @@
             background-color: #f9f9f9;
         }
 
-        #propertyTree, #propertyTree ul {
+        #propertyTree,
+        #propertyTree ul {
             list-style-type: none;
             padding-left: 20px;
         }
@@ -81,7 +82,8 @@
             max-width: 500px;
         }
 
-        #searchButton, #clearSearch {
+        #searchButton,
+        #clearSearch {
             padding: 10px 15px;
             background-color: #007bff;
             color: white;
@@ -175,10 +177,12 @@
                                     <li>
                                         <span class="tree-node">Shabad-Hyderabad</span>
                                         <ul>
-                                            <li><a href="#" class="tree-leaf">VIAN VALLEY Phase 3 & 4 Plots
+                                            <li><a href="/project-details/hyderabad/SHABAD/VIAN-VALLEY34.html"
+                                                    class="tree-leaf">VIAN VALLEY Phase 3 & 4 Plots
                                                     Shabad-Hyderabad</a>
                                             </li>
-                                            <li><a href="#" class="tree-leaf">VIAN VALLEY Phase 1 and Phase 2 and VIAN
+                                            <li><a href="/project-details/hyderabad/SHABAD/vian-valley-phase1-2-jubilee.html"
+                                                    class="tree-leaf">VIAN VALLEY Phase 1 and Phase 2 and VIAN
                                                     BBG'S JUBILEE CENTRAL Plots Shabad-Hyderabad</a>
                                             </li>
                                         </ul>
@@ -186,29 +190,40 @@
                                     <li>
                                         <span class="tree-node">Sadashivpet-Hyderabad</span>
                                         <ul>
-                                            <li><a href="#" class="tree-leaf">TRUE FORTUNE PRIDE Plots
+                                            <li><a href="/project-details/hyderabad/sadashivpet/truefortune.html"
+                                                    class="tree-leaf">TRUE FORTUNE PRIDE Plots
                                                     Sadashivpet-Hyderabad</a>
                                             </li>
-                                            <li><a href="#" class="tree-leaf">TRUE IKONIA PHASE-1 & COMMERCIAL Plots
+                                            <li><a href="/project-details/hyderabad/sadashivpet/Ikonia.html"
+                                                    class="tree-leaf">TRUE IKONIA PHASE-1 & COMMERCIAL Plots
                                                     Sadashivpet-Hyderabad</a>
                                             </li>
-                                            <li><a href="#" class="tree-leaf">TRUE FORTUNE EXECUTIVE Plots
+                                            <li><a href="/project-details/hyderabad/sadashivpet/Executive.html"
+                                                    class="tree-leaf">TRUE FORTUNE EXECUTIVE Plots
                                                     Sadashivpet-Hyderabad</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li><span class="tree-node">Yadagirigutta-Hyderabad</span>
-                                         <ul>
-                                            <li><a href="#" class="tree-leaf">AKSHITHA Yadagirigutta-Hyderabad</a>
+                                        <ul>
+                                            <li><a href="/project-details/hyderabad/YADAGIRIGUTTA/AKSHITHA.html"
+                                                    class="tree-leaf">AKSHITHA Plots Yadagirigutta-Hyderabad</a>
                                             </li>
-                                            <li><a href="#" class="tree-leaf">TRUE PRESTIGE COMMERCIAL Yadagirigutta-Hyderabad</a>
+                                            <li><a href="/project-details/hyderabad/YADAGIRIGUTTA/true-prestige.html"
+                                                    class="tree-leaf">TRUE PRESTIGE COMMERCIAL Plots
+                                                    Yadagirigutta-Hyderabad</a>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a class="tree-node" href="/projects/hydrabad/suryapet.html">SURYAPET Plots-Hyderabad</a></li>
+                                    <li><span class="tree-node">Suryapet-Hyderabad</span>
+                                        <ul>
+                                            <li><a href="/project-details/hyderabad/YADAGIRIGUTTA/AKSHITHA.html"
+                                                    class="tree-leaf">Suryapet Plots -Hyderabad</a>
+                                            </li>
+                                        </ul>
                                     <li><span class="tree-node">Aleru-Hyderabad</span>
                                         <ul>
-                                            <li><a href="#" class="tree-leaf">ROYAL HIWAY MEADOWS Plots-Hyderabad</a>
+                                            <li><a href="/project-details/hyderabad/ALERU/MEADOWS.html" class="tree-leaf">ROYAL HIWAY MEADOWS Plots-Hyderabad</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -274,7 +289,7 @@
                     if (childUl) {
                         childUl.style.display = 'none';
                         node.classList.add('collapsed');
-                        
+
                         // Add click event to toggle nodes
                         node.addEventListener('click', function (e) {
                             e.stopPropagation();
@@ -398,4 +413,5 @@
         });
     </script>
 </body>
+
 </html>

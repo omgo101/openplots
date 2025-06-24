@@ -68,7 +68,7 @@ main {
 
 .search-section button {
     padding: 12px 20px;
-    background-color: #3498db;
+    background-color: #e74c3c;
     color: white;
     border: none;
     border-radius: 6px;
@@ -78,14 +78,6 @@ main {
 }
 
 .search-section button:hover {
-    background-color: #2980b9;
-}
-
-#clearSearch {
-    background-color: #e74c3c;
-}
-
-#clearSearch:hover {
     background-color: #c0392b;
 }
 

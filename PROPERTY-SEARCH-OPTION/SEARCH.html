@@ -322,14 +322,13 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const searchInput = document.getElementById("searchInput");
             const searchButton = document.getElementById("searchButton");
             const clearSearch = document.getElementById("clearSearch");
             const tree = document.getElementById("propertyTree");
-
+    
             // Initialize tree - collapse all nodes by default
             function initTree() {
                 document.querySelectorAll('.tree-node').forEach(node => {
@@ -337,7 +336,7 @@
                     if (childUl) {
                         childUl.style.display = 'none';
                         node.classList.add('collapsed');
-
+    
                         // Add click event to toggle nodes
                         node.addEventListener('click', function (e) {
                             e.stopPropagation();
@@ -346,7 +345,7 @@
                     }
                 });
             }
-
+    
             function toggleNode(node) {
                 const childUl = node.parentElement.querySelector('ul');
                 if (childUl) {
@@ -356,7 +355,7 @@
                     node.classList.toggle('expanded', !isVisible);
                 }
             }
-
+    
             // Expand all parent nodes up to root
             function expandParents(el) {
                 let parent = el.parentElement;
@@ -372,7 +371,7 @@
                     parent = parent.parentElement;
                 }
             }
-
+    
             // Highlight multiple search terms
             function highlightText(el, searchTerms) {
                 let text = el.textContent;
@@ -384,36 +383,25 @@
                 });
                 el.innerHTML = text;
             }
-
-            // Remove highlights
-            function removeHighlights() {
-                document.querySelectorAll('.highlight').forEach(span => {
-                    const parent = span.parentNode;
-                    parent.textContent = parent.textContent;
-                });
-            }
-
+    
             // Perform search
             function performSearch() {
                 const query = searchInput.value.trim().toLowerCase();
                 if (query === '') {
-                    clearSearchResults();
                     return;
                 }
-
-                removeHighlights();
-
+    
                 // Split search query into individual words
                 const searchTerms = query.split(/\s+/);
-
+    
                 const allItems = tree.querySelectorAll('.tree-node, .tree-leaf');
                 let hasMatches = false;
-
+    
                 // First hide all items
                 allItems.forEach(item => {
                     item.style.display = 'none';
                 });
-
+    
                 // Show matching items and their parents
                 allItems.forEach(item => {
                     const text = item.textContent.toLowerCase();
@@ -421,7 +409,7 @@
                     const allTermsMatch = searchTerms.every(term =>
                         term.trim() !== '' && text.includes(term)
                     );
-
+    
                     if (allTermsMatch) {
                         item.style.display = '';
                         highlightText(item, searchTerms);
@@ -429,46 +417,27 @@
                         hasMatches = true;
                     }
                 });
-
+    
                 if (!hasMatches) {
                     alert('No matching properties found.');
                 }
             }
-
-            // Clear search and reset tree
-            function clearSearchResults() {
-                searchInput.value = '';
-                removeHighlights();
-
-                // Show all items
-                document.querySelectorAll('.tree-node, .tree-leaf').forEach(item => {
-                    item.style.display = '';
-                });
-
-                // Collapse all nodes except root
-                document.querySelectorAll('.tree-node').forEach(node => {
-                    const ul = node.parentElement.querySelector('ul');
-                    if (ul) {
-                        ul.style.display = 'none';
-                        node.classList.add('collapsed');
-                        node.classList.remove('expanded');
-                    }
-                });
-            }
-
+    
             // Search button click
             searchButton.addEventListener('click', performSearch);
-
+    
             // Search on Enter key
             searchInput.addEventListener('keypress', function (e) {
                 if (e.key === 'Enter') {
                     performSearch();
                 }
             });
-
-            // Clear button
-            clearSearch.addEventListener('click', clearSearchResults);
-
+    
+            // Clear button - redirect to search page
+            clearSearch.addEventListener('click', function() {
+                window.location.href = '/PROPERTY-SEARCH-OPTION/SEARCH.html';
+            });
+    
             // Initialize tree on load
             initTree();
         });

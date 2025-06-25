@@ -88,7 +88,7 @@
   </div>
 
   <!-- Blog Content in IFrame -->
-  <iframe id="blogFrame" seamless src="https://openplotssohan.blogspot.com" loading="lazy"></iframe>
+  <iframe id="blogFrame" seamless src="https://sohanopenplots.blogspot.com/" loading="lazy"></iframe>
 
   <!-- Footer Include -->
   <div data-include="/footer.html"></div>
@@ -133,7 +133,7 @@
         showButtonLoading(searchButton, searchText);
         showIframeLoading();
         
-        document.getElementById('blogFrame').src = `https://openplotssohan.blogspot.com/search?q=${encodeURIComponent(searchTerm)}`;
+        document.getElementById('blogFrame').src = `https://sohanopenplots.blogspot.com/search?q=${encodeURIComponent(searchTerm)}`;
       }
     });
 
@@ -146,7 +146,7 @@
       showIframeLoading();
       
       document.getElementById('searchInput').value = '';
-      document.getElementById('blogFrame').src = 'https://openplotssohan.blogspot.com';
+      document.getElementById('blogFrame').src = 'https://sohanopenplots.blogspot.com';
     });
 
     // Handle iframe load events

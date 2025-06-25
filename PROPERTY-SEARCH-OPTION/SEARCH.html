@@ -312,27 +312,87 @@
                             </li>
                         </ul>
                     </li>
-                      <li>
+                    <li>
                         <span class="tree-node">Ongole</span>
                         <ul>
                             <li><a href="/projects/ongole.html" class="tree-leaf">
-                                   Ongole Open Plot</a>
+                                    Ongole Open Plot</a>
                             </li>
                         </ul>
                     </li>
-                     <li>
+                    <li>
                         <span class="tree-node">Khammam</span>
                         <ul>
                             <li><a href="/project-details/khammam/sricity.html" class="tree-leaf">
-                                 Sricity East Bloom and East Side Plots-Khammam</a>
+                                    Sricity East Bloom and East Side Plots-Khammam</a>
                             </li>
                         </ul>
                     </li>
-                     <li>
+                    <li>
                         <span class="tree-node">Suryapet</span>
                         <ul>
                             <li><a href="/projects/Suryapet.html" class="tree-leaf">
-                                 Suryapet Plots</a>
+                                    Suryapet Plots</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="tree-node">Luxury Villas</span>
+                        <ul>
+                            <li>
+                                <span class="tree-node">Vijayawada-Luxury Villas</span>
+                                <ul>
+                                    <li><a href="/project-details/VILLAS-VIJAYAWADA/modern-villas.html"
+                                            class="tree-leaf">
+                                            Modern villas in Luxury Villas- Vijayawada</a>
+                                    </li>
+                                    <li><a href="/project-details/VILLAS-VIJAYAWADA/high-end-villas.html"
+                                            class="tree-leaf">
+                                            High-end villas Vijayawada</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="tree-node">Luxury Apartments</span>
+                        <ul>
+                            <li>
+                                <span class="tree-node">Luxury Apartment Flats in Hyderabad</span>
+                                <ul>
+                                    <li>
+                                        <span class="tree-node">Erragadda Residences Luxury Apartment Flats -
+                                            Hyderabad</span>
+                                        <ul>
+                                            <li><a href="/project-details/flats-hyderabad/erragadda/Erragadda-flats.html"
+                                                    class="tree-leaf">
+                                                    LUXURY APARTMENTS flats IN ERRAGADDA-Hyderabad</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="tree-node">Luxury Apartment Flats in Puppalaguda -
+                                            Nanakramguda-Hyderabad</span>
+                                        <ul>
+                                            <li><a href="/project-details/flats-hyderabad/puppalaguda/vue-residences.html"
+                                                    class="tree-leaf">
+                                                    The Vue Residences LUXURY APARTMENTS flats IN Puppalaguda -
+                                                    Nanakramguda-Hyderabad</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="tree-node">Luxury Apartment Flats in Osman Nagar,
+                                            Tellapur-Hyderabad</span>
+                                        <ul>
+                                            <li><a href="/project-details/flats-hyderabad/TELLAPUR/tellapur-apartments.html"
+                                                    class="tree-leaf">
+                                                    The Osman Nagar Residences LUXURY APARTMENTS flats IN Osman Nagar,
+                                                    Tellapur-Hyderabad</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -352,7 +412,7 @@
             const searchButton = document.getElementById("searchButton");
             const clearSearch = document.getElementById("clearSearch");
             const tree = document.getElementById("propertyTree");
-    
+
             // Initialize tree - collapse all nodes by default
             function initTree() {
                 document.querySelectorAll('.tree-node').forEach(node => {
@@ -360,7 +420,7 @@
                     if (childUl) {
                         childUl.style.display = 'none';
                         node.classList.add('collapsed');
-    
+
                         // Add click event to toggle nodes
                         node.addEventListener('click', function (e) {
                             e.stopPropagation();
@@ -369,7 +429,7 @@
                     }
                 });
             }
-    
+
             function toggleNode(node) {
                 const childUl = node.parentElement.querySelector('ul');
                 if (childUl) {
@@ -379,7 +439,7 @@
                     node.classList.toggle('expanded', !isVisible);
                 }
             }
-    
+
             // Expand all parent nodes up to root
             function expandParents(el) {
                 let parent = el.parentElement;
@@ -395,7 +455,7 @@
                     parent = parent.parentElement;
                 }
             }
-    
+
             // Highlight multiple search terms
             function highlightText(el, searchTerms) {
                 let text = el.textContent;
@@ -407,25 +467,25 @@
                 });
                 el.innerHTML = text;
             }
-    
+
             // Perform search
             function performSearch() {
                 const query = searchInput.value.trim().toLowerCase();
                 if (query === '') {
                     return;
                 }
-    
+
                 // Split search query into individual words
                 const searchTerms = query.split(/\s+/);
-    
+
                 const allItems = tree.querySelectorAll('.tree-node, .tree-leaf');
                 let hasMatches = false;
-    
+
                 // First hide all items
                 allItems.forEach(item => {
                     item.style.display = 'none';
                 });
-    
+
                 // Show matching items and their parents
                 allItems.forEach(item => {
                     const text = item.textContent.toLowerCase();
@@ -433,7 +493,7 @@
                     const allTermsMatch = searchTerms.every(term =>
                         term.trim() !== '' && text.includes(term)
                     );
-    
+
                     if (allTermsMatch) {
                         item.style.display = '';
                         highlightText(item, searchTerms);
@@ -441,27 +501,27 @@
                         hasMatches = true;
                     }
                 });
-    
+
                 if (!hasMatches) {
                     alert('No matching properties found.');
                 }
             }
-    
+
             // Search button click
             searchButton.addEventListener('click', performSearch);
-    
+
             // Search on Enter key
             searchInput.addEventListener('keypress', function (e) {
                 if (e.key === 'Enter') {
                     performSearch();
                 }
             });
-    
+
             // Clear button - redirect to search page
-            clearSearch.addEventListener('click', function() {
+            clearSearch.addEventListener('click', function () {
                 window.location.href = '/PROPERTY-SEARCH-OPTION/SEARCH.html';
             });
-    
+
             // Initialize tree on load
             initTree();
         });

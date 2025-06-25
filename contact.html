@@ -52,55 +52,50 @@
                 <div class="col-lg-7">
                     <div class="contact-form-container p-4 p-lg-5 shadow">
                         <h2 class="mb-4 text-center">Send Us a Message</h2>
-                        <form id="contactForm">
+                        <form id="contactForm"
+                            action="https://script.google.com/macros/s/AKfycbzRAKMN8F5YgyXiQCPst01RmCweUZeXPrPKB71ihYzCbLXRjzc7sF-ch58GF_QdyHFC-g/exec"
+                            method="POST">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name"
-                                            required>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email"
-                                            required>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone"
-                                            placeholder="Your Phone Number" required>
+                                        <input type="tel" class="form-control" id="phone" name="phone" required>
                                         <label for="phone">Phone Number</label>
                                     </div>
                                 </div>
+
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <select class="form-select" id="interest" required>
-                                            <option value="" selected disabled>Select an option</option>
-                                            <option value="Hyderabad Plots">Hyderabad Open Plots</option>
-                                            <option value="Vijayawada Villas">Vijayawada Luxury Villas</option>
-                                            <option value="Visakhapatnam Plots">Visakhapatnam Open Plots</option>
-                                            <option value="Other">Other Properties</option>
-                                        </select>
-                                        <label for="interest">I'm interested in</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Your Message" id="message"
+                                        <textarea class="form-control" id="message" name="message"
                                             style="height: 150px"></textarea>
                                         <label for="message">Your Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary btn-lg w-100" type="submit">Send Message</button>
+                                    <button id="submitBtn" class="btn btn-primary btn-lg w-100" type="submit">
+                                        <span id="btnText">Send Message</span>
+                                        <span id="btnLoader" class="spinner-border spinner-border-sm d-none"
+                                            role="status" aria-hidden="true"></span>
+                                    </button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
+
 
                 <!-- Contact Info -->
                 <div class="col-lg-5">
@@ -178,6 +173,37 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     </a>
+     <script>
+        const form = document.getElementById("contactForm");
+        const submitBtn = document.getElementById("submitBtn");
+        const btnText = document.getElementById("btnText");
+        const btnLoader = document.getElementById("btnLoader");
+      
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+      
+          // Show loader and disable button
+          btnText.textContent = "Sending...";
+          btnLoader.classList.remove("d-none");
+          submitBtn.disabled = true;
+      
+          fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form)
+          }).then(response => {
+            alert("Message sent successfully!");
+            form.reset();
+          }).catch(error => {
+            alert("Error sending message.");
+            console.error(error);
+          }).finally(() => {
+            // Hide loader and reset button text
+            btnText.textContent = "Send Message";
+            btnLoader.classList.add("d-none");
+            submitBtn.disabled = false;
+          });
+        });
+      </script>
 </body>
 
 </html>

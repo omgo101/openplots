@@ -59,6 +59,10 @@
       align-items: center;
       z-index: 1000;
     }
+    
+
+  
+ 
   </style>
 </head>
 <body>
@@ -90,7 +94,31 @@
 
   <!-- Blog Content in IFrame -->
   <iframe id="blogFrame" seamless src="https://sohanopenplots.blogspot.com/" loading="lazy"></iframe>
+<!-- Centered Message and Button -->
+<div class="text-center my-5">
+  <h5 class="mb-3">Love our blog or need constant updates on properties?</h5>
+  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+    Subscribe to our Newsletter
+  </button>
+</div>
 
+  
+<!-- Newsletter Modal -->
+<div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="subscribeModalLabel">Subscribe to our Newsletter</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeFuk8LZHrvtcZTxscTGFttpo5flT_gLTRcJmqbw6L1CcdAGQ/viewform?embedded=true"
+          width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+</div>
+  
   <!-- Footer Include -->
   <div data-include="/footer.html"></div>
 
